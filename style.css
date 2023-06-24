@@ -39,7 +39,7 @@ body{
     font-size: 0.95rem;
     padding: 12px 16px;
     min-width: 75%;
-    border-radius: 10px 10px 10px 0;
+    border-radius: 10px 10px 0px 10px;
     background: #724ae8;
 }
 .chatbox .incoming p{
@@ -55,10 +55,42 @@ body{
     position: absolute;
     bottom: 0;
     width: 100%;
+    display: flex;
+    gap: 5px;
     background: #FFF;
     padding: 15px 20px;
     border-top: 1px solid #ccc;
 }
 .chat_input textarea{
-    
+    height: 55px;
+    width: 100%;
+    resize: none;
+    font-size: 0.95rem;
+    border: none;
+    outline: none ;
+    padding: 16px 15px 16px 0;
+}
+.chat_input span{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    height: 40px;
+    /* line-height: 55px; */
+    cursor: pointer;
+    background: #724ae8;
+    width: 40px;
+    border-radius: 2rem;
+    color: #fff;
+    font-size: 0.95rem;
+    align-self: flex-end;
+    visibility: hidden;
+}
+.chat_input span:hover{
+    background: rgb(230, 127, 127);
+}
+.chat_input textarea:valid ~ span{
+    visibility: visible;
 }
